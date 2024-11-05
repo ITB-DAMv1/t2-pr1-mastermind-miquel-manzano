@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\theza\\Documents\\Programacio\\MastermindGame\\PR1ManzanoEscuderoMiquel\\PR1ManzanoEscuderoMiquel\\PR1ManzanoEscuderoMiquel.csproj": {}
+    "C:\\Users\\theza\\Documents\\Programacio\\t2-pr1-mastermind-miquel-manzano\\PR1ManzanoEscuderoMiquel\\PR1ManzanoEscuderoMiquel\\PR1ManzanoEscuderoMiquel.csproj": {}
   },
   "projects": {
-    "C:\\Users\\theza\\Documents\\Programacio\\MastermindGame\\PR1ManzanoEscuderoMiquel\\PR1ManzanoEscuderoMiquel\\PR1ManzanoEscuderoMiquel.csproj": {
+    "C:\\Users\\theza\\Documents\\Programacio\\t2-pr1-mastermind-miquel-manzano\\PR1ManzanoEscuderoMiquel\\PR1ManzanoEscuderoMiquel\\PR1ManzanoEscuderoMiquel.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\theza\\Documents\\Programacio\\MastermindGame\\PR1ManzanoEscuderoMiquel\\PR1ManzanoEscuderoMiquel\\PR1ManzanoEscuderoMiquel.csproj",
+        "projectUniqueName": "C:\\Users\\theza\\Documents\\Programacio\\t2-pr1-mastermind-miquel-manzano\\PR1ManzanoEscuderoMiquel\\PR1ManzanoEscuderoMiquel\\PR1ManzanoEscuderoMiquel.csproj",
         "projectName": "PR1ManzanoEscuderoMiquel",
-        "projectPath": "C:\\Users\\theza\\Documents\\Programacio\\MastermindGame\\PR1ManzanoEscuderoMiquel\\PR1ManzanoEscuderoMiquel\\PR1ManzanoEscuderoMiquel.csproj",
+        "projectPath": "C:\\Users\\theza\\Documents\\Programacio\\t2-pr1-mastermind-miquel-manzano\\PR1ManzanoEscuderoMiquel\\PR1ManzanoEscuderoMiquel\\PR1ManzanoEscuderoMiquel.csproj",
         "packagesPath": "C:\\Users\\theza\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\theza\\Documents\\Programacio\\MastermindGame\\PR1ManzanoEscuderoMiquel\\PR1ManzanoEscuderoMiquel\\obj\\",
+        "outputPath": "C:\\Users\\theza\\Documents\\Programacio\\t2-pr1-mastermind-miquel-manzano\\PR1ManzanoEscuderoMiquel\\PR1ManzanoEscuderoMiquel\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\theza\\AppData\\Roaming\\NuGet\\NuGet.Config",
