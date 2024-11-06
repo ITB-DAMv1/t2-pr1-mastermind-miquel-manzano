@@ -139,6 +139,8 @@ namespace PR1ManzanoEscuderoMiquel
             ArrayMaker(combNumsArray, StringArray, CombNums);
             do
             {
+                string msgAttemptsRemain = $"Remain attempts: {attempts}\n";
+                Console.WriteLine(msgAttemptsRemain);
                 ArrayMaker(userNums, InsertNumsArray);
                 Console.Clear();
                 Console.WriteLine(MsgUserComb);
@@ -148,7 +150,7 @@ namespace PR1ManzanoEscuderoMiquel
                 flag = ArrayMaker(userNums, combNumsArray, CompareArrays);
                 Console.Write("\n\n");
                 --attempts;
-            } while (attempts > 0 && !flag);
+            } while (attempts >= 1 && !flag);
         }
 
         public static void WinLoseMenu(bool flag) // Menu de resultat del joc
@@ -160,12 +162,10 @@ namespace PR1ManzanoEscuderoMiquel
 
             if (flag)
             {
-                Console.Clear();
                 Console.WriteLine(MsgWin);
             }
             else
             {
-                Console.Clear();
                 Console.WriteLine(MsgLose);
             }
             Console.WriteLine("\n\n");
@@ -185,7 +185,7 @@ namespace PR1ManzanoEscuderoMiquel
 
         public static int UserNumInput(int min, int max) // SUPERMEGA UTIL FUNCIO ñam
         {
-            const string MsgInvalidNum = "Invalid Number, Try again..";
+            string MsgInvalidNum = $"Invalid Number, Try again..\nI only accept numbers within the range: {min} - {max}";
             int userNum;
             Console.Write("> ");
             bool chekUserNum = int.TryParse(Console.ReadLine(), out userNum);
@@ -193,6 +193,7 @@ namespace PR1ManzanoEscuderoMiquel
             while (!chekUserNum || (userNum < min || userNum > max))
             {
                 Console.WriteLine(MsgInvalidNum);
+                Console.Write("> ");
                 chekUserNum = int.TryParse(Console.ReadLine(), out userNum);
             }
             return userNum;
@@ -235,16 +236,16 @@ namespace PR1ManzanoEscuderoMiquel
             {
                 switch (mode)
                 {
-                    case 0: // En aquest mode, inserim nombres a l'array escollits per l'usuari.
+                    case InsertNumsArray: // En aquest mode, inserim nombres a l'array escollits per l'usuari.
                         InsertUserNums(array, i);
                         break;
-                    case 1: // En aquest mode, mostrem els nombres d'una array per pantalla.
+                    case ReadNumsArray: // En aquest mode, mostrem els nombres d'una array per pantalla.
                         ReadArray(array, i);
                         break;
-                    case 2: // En aquest mode, pasem un string a Array.
+                    case StringArray: // En aquest mode, pasem un string a Array.
                         StringToArray(array, i, varString);
                         break;
-                    case 3: // En aquest mode, comparem dos Arrays.
+                    case CompareArrays: // En aquest mode, comparem dos Arrays.
                         SameNumbers = SameNumbers + ArrayComparator(array, array2, i);
                         break;
                 }
