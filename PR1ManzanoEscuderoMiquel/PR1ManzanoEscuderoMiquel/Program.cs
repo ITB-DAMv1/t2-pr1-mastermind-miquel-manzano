@@ -33,6 +33,7 @@ namespace PR1ManzanoEscuderoMiquel
         const string Almost = "\u00D8";
 
 
+
         // ARRAYMAKER MODES:
 
         const int InsertNumsArray = 0;
@@ -50,7 +51,20 @@ namespace PR1ManzanoEscuderoMiquel
 
         public static void TitleMenu() // Funcio amb el menu principal del joc
         {
-            const string MsgTitle = "The Best Mastermind Game";
+            const string MsgTitle = @"                                                                                                        
+ _____ _          _____         _      _____         _                 _       _    _____               
+|_   _| |_ ___   | __  |___ ___| |_   |     |___ ___| |_ ___ ___ _____|_|___ _| |  |   __|___ _____ ___ 
+  | | |   | -_|  | __ -| -_|_ -|  _|  | | | | .'|_ -|  _| -_|  _|     | |   | . |  |  |  | .'|     | -_|
+  |_| |_|_|___|  |_____|___|___|_|    |_|_|_|__,|___|_| |___|_| |_|_|_|_|_|_|___|  |_____|__,|_|_|_|___|
+                                                                                                        
+-----------------------------------------------------------------------------------------------------------------
+
+   |\      _,,,---,,_                                                   
+   /,`.-'`'    -.  ;-;;,_                                                        )\._.,--....,'``.
+  |,4-  ) )-,_..;\ (  `'-'                                                      /,   _.. \   _\  ;`._ ,.
+ '---''(_/--'  `-'\_)                    Created by Miquel Manzano..           `._.-(,_..'--(,_..'`-.;.'
+
+-----------------------------------------------------------------------------------------------------------------";
             const string MsgOptions = "1. Start\n2. Exit";
 
             int optionOne = 1;
@@ -72,11 +86,13 @@ namespace PR1ManzanoEscuderoMiquel
         {
             const int MinOptions = 1;
             const int MaxOptions = 5;
+            const string MsgDifficultyTitle = "Choose the difficulty:";
 
-            string MsgCustomAttemps = $"Write the number of attempts you want ({MinCustomAttempts} - {MaxCustomAttempts}):";
-            string MsgDifficultyOptions = $"1. Dificultat novell: {NovellAttempts} intents\n2. Dificultat aficionat: {AficionatAttempts} intents\n3. Dificultat expert: {ExpertAttempts} intents\n4. Dificultat Màster: {MasterAttempts} intents\n5. Dificultat personalitzada\n";
+            string msgCustomAttemps = $"Write the number of attempts you want ({MinCustomAttempts} - {MaxCustomAttempts}):";
+            string msgDifficultyOptions = $"1. Dificultat novell: {NovellAttempts} intents\n2. Dificultat aficionat: {AficionatAttempts} intents\n3. Dificultat expert: {ExpertAttempts} intents\n4. Dificultat Màster: {MasterAttempts} intents\n5. Dificultat personalitzada\n";
 
-            Console.WriteLine(MsgDifficultyOptions);
+            Console.WriteLine(MsgDifficultyTitle);
+            Console.WriteLine(msgDifficultyOptions);
             int attempts = UserNumInput(MinOptions, MaxOptions);
             switch (attempts)
             {
@@ -93,7 +109,7 @@ namespace PR1ManzanoEscuderoMiquel
                     attempts = MasterAttempts;
                     break;
                 case 5:
-                    Console.WriteLine(MsgCustomAttemps);
+                    Console.WriteLine(msgCustomAttemps);
                     attempts = UserNumInput(MinCustomAttempts, MaxCustomAttempts);
                     break;
                 default: 
@@ -171,6 +187,7 @@ namespace PR1ManzanoEscuderoMiquel
         {
             const string MsgInvalidNum = "Invalid Number, Try again..";
             int userNum;
+            Console.Write("> ");
             bool chekUserNum = int.TryParse(Console.ReadLine(), out userNum);
 
             while (!chekUserNum || (userNum < min || userNum > max))
@@ -187,7 +204,6 @@ namespace PR1ManzanoEscuderoMiquel
             Console.Clear();
             Console.WriteLine(MsgGoodbye);
         }
-
 
 
 
