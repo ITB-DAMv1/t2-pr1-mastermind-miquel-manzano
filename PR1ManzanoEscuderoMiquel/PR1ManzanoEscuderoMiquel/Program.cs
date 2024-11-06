@@ -52,7 +52,7 @@ namespace PR1ManzanoEscuderoMiquel
         {
             const string MsgTitle = "The Best Mastermind Game";
             const string MsgOptions = "1. Start\n2. Exit";
-            const string MsgGoodbye = "Goodbye!!";
+
             int optionOne = 1;
             int optionTwo = 2;
 
@@ -64,8 +64,7 @@ namespace PR1ManzanoEscuderoMiquel
                 DifficultyMenu();
             } else
             {
-                Console.Clear();
-                Console.WriteLine(MsgGoodbye);
+                Exit();
             }
         }
 
@@ -142,7 +141,6 @@ namespace PR1ManzanoEscuderoMiquel
             const string MsgLose = "SKILL ISSUE, YOU LOSE THE GAME...";
             const string MsgTitleOption = "0. Go title menu.";
             const string MsgExitOption = "1. Exit";
-            const string MsgGoodbye = "Goodbye!!";
 
             if (flag)
             {
@@ -164,8 +162,7 @@ namespace PR1ManzanoEscuderoMiquel
                     TitleMenu();
                     break;
                 case 1:
-                    Console.Clear();
-                    Console.WriteLine(MsgGoodbye);
+                    Exit();
                     break;
             }
         }
@@ -182,6 +179,13 @@ namespace PR1ManzanoEscuderoMiquel
                 chekUserNum = int.TryParse(Console.ReadLine(), out userNum);
             }
             return userNum;
+        }
+
+        public static void Exit()
+        {
+            const string MsgGoodbye = "Goodbye!!";
+            Console.Clear();
+            Console.WriteLine(MsgGoodbye);
         }
 
 
@@ -229,8 +233,8 @@ namespace PR1ManzanoEscuderoMiquel
                         break;
                 }
             }
-            return SameNumbers >= CombArrayLength;
             Console.Write("\n");
+            return SameNumbers >= CombArrayLength;
         }
 
         public static void InsertUserNums(int[] Array, int posicion)
